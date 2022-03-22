@@ -3,7 +3,8 @@
  *
  * [1] Two Sum
  */
-System.Console.WriteLine("Hello World!");
+ 
+Console.WriteLine($"[{String.Join(", ", new Solution().TwoSum(new int[] {2,7,15,19}, 9))}]");
 
 // @lc code=start
 public class Solution {
@@ -19,5 +20,3 @@ public class Solution {
     }
 }
 // @lc code=end
-
-// Console.WriteLine(new Solution().TwoSum(new int[] {2,7,15,19}, 9));
