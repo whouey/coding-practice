@@ -11,11 +11,13 @@ from typing import List
 # @lc code=start
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
+        hash = dict()
         for idx, num in enumerate(nums):
-            diff = target-num
-            for i in range(idx+1, len(nums)):
-                if nums[i]==diff:
-                    return [idx, i]
+            if num in hash:
+                return [hash[num], idx]
+            else:
+                diff = target - num
+                hash[diff] = idx
 # @lc code=end
 
 #%%
