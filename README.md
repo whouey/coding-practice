@@ -1,6 +1,2 @@
 # coding-practice
-A repository stores personal practice codes.
-
-
-## this project is under construction
-
+A repository stores personal coding practice of leetcode.

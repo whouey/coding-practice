@@ -22,3 +22,5 @@ class Solution:
 
 #%%
 print(Solution().twoSum([2,7,15,19], 9))
+
+# %%

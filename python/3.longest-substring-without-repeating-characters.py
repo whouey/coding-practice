@@ -29,3 +29,7 @@ class Solution:
         return answer
 # @lc code=end
 
+#%%
+print(Solution().lengthOfLongestSubstring('pwwkew'))
+
+#%%

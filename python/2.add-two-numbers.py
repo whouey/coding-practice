@@ -4,12 +4,44 @@
 # [2] Add Two Numbers
 #
 
-# @lc code=start
+#%%
+from typing import Optional
+
+#%%
 # Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+#%%
+def list_to_ListNode(l):
+    head = None
+    cur = None
+    for i in range(len(l)):
+        node = ListNode(l[i])
+
+        if not head:
+            head = node
+
+        if not cur:
+            cur = node
+        else:
+            cur.next = node
+            cur = node
+    
+    return head
+
+def ListNode_to_list(listnode):
+    l = []
+    cur = listnode
+    while cur:
+        l.append(cur.val)
+        cur = cur.next
+    return l
+
+#%%
+# @lc code=start
 class Solution:
     def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
         answer = ListNode()
@@ -31,3 +63,11 @@ class Solution:
         return answer.next
 # @lc code=end
 
+#%%
+l1 = list_to_ListNode([2, 4, 3])
+l2 = list_to_ListNode([5, 6, 4])
+answer = ListNode_to_list(Solution().addTwoNumbers(l1, l2))
+
+print(answer)
+
+#%%
