@@ -1,16 +1,11 @@
 /*
- * @lc app=leetcode id=700 lang=csharp
+ * @lc app=leetcode id=669 lang=csharp
  *
- * [700] Search in a Binary Search Tree
+ * [669] Trim a Binary Search Tree
  */
- using System.Collections;
- using System.Collections.Generic;
 
-var root = TreeNode.FromEnumerable(new[] {4,2,7,1,3});
-var val = 1;
-System.Console.WriteLine(new Solution().SearchBST(root, val));
- 
- 
+
+
 // Definition for a binary tree node.
 public class TreeNode {
     public int val;
@@ -70,19 +65,11 @@ public class TreeNode {
         return $"[{string.Join(", ", l)}]"; 
     }
 }
-
 // @lc code=start
 public class Solution {
-    public TreeNode SearchBST(TreeNode root, int val) {
-        if (root == null || root.val == val) {
-            return root;
-        }
-        else if(root.val > val) {
-            return SearchBST(root.left, val);
-        }
-        else {
-            return SearchBST(root.right, val);
-        }
+    public TreeNode TrimBST(TreeNode root, int low, int high) {
+        
     }
 }
 // @lc code=end
+
